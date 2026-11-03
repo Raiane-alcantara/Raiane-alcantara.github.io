@@ -10,6 +10,8 @@ const X = "assets/videos/";
 const vid = (nome, titulo, categoria, vertical = true) => ({ tipo: "video", src: `${X}${nome}.mp4`, poster: `${X}${nome}-thumb.jpg`, vertical, titulo, categoria });
 
 const VIDEOS = [
+  vid("before-after-raiane-1", "Before and after: raw vs edited talking-head reel", "reels"),
+  vid("before-after-raiane-2", "Before and after: talking-head reel with motion graphics", "reels"),
   vid("talking-head-reel-1", "Talking-head reel for social media", "reels"),
   vid("talking-head-reel-2", "Podcast-style talking-head reel", "reels"),
   vid("megalodon-documentary", "Megalodon: documentary edit with narration and sound design", "documentary", false),
