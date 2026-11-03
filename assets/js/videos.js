@@ -4,12 +4,14 @@
    - YouTube:  { tipo: "youtube", id: "ID_DO_VIDEO", titulo: "...", categoria: "..." }
    - Arquivo:  vid("nome-do-arquivo", "Título", "categoria", false)   (false = horizontal; true = vertical)
                o .mp4 e o -thumb.jpg vão em assets/videos/
-   categoria: documentary | motion | business | ai
+   categoria: reels | documentary | motion | business | ai
    ========================================================= */
 const X = "assets/videos/";
 const vid = (nome, titulo, categoria, vertical = true) => ({ tipo: "video", src: `${X}${nome}.mp4`, poster: `${X}${nome}-thumb.jpg`, vertical, titulo, categoria });
 
 const VIDEOS = [
+  vid("talking-head-reel-1", "Talking-head reel for social media", "reels"),
+  vid("talking-head-reel-2", "Podcast-style talking-head reel", "reels"),
   vid("megalodon-documentary", "Megalodon: documentary edit with narration and sound design", "documentary", false),
   vid("stalin-war-documentary", "WWII archive documentary: archival footage, narration and sound design", "documentary", false),
   vid("dinosaur-explainer", "Dinosaur extinction explainer: kinetic text, UI and 3D Earth", "motion", false),
