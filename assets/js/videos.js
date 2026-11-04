@@ -18,6 +18,7 @@ const VIDEOS = [
   vid("reformation-documentary", "The Protestant Reformation: historical documentary with archive motion", "documentary", false),
   vid("edison-documentary", "Thomas Edison: then vs now documentary with motion graphics", "documentary", false),
   vid("stalin-war-documentary", "WWII archive documentary: archival footage, narration and sound design", "documentary", false),
+  vid("china-japan-war-motion-graphics", "China vs Japan 1937-1945: animated war map explainer", "motion", false),
   vid("dinosaur-explainer", "Dinosaur extinction explainer: kinetic text, UI and 3D Earth", "motion", false),
   vid("trex-documentary", "T. rex: documentary editing sample (real footage only)", "documentary", false),
   vid("us-vs-mexico-map-explainer", "US vs Mexico: animated map explainer", "motion", false),
