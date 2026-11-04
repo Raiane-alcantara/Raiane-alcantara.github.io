@@ -15,6 +15,7 @@ const VIDEOS = [
   vid("talking-head-reel-1", "Talking-head reel for social media", "reels"),
   vid("talking-head-reel-2", "Podcast-style talking-head reel", "reels"),
   vid("megalodon-documentary", "Megalodon: documentary edit with narration and sound design", "documentary", false),
+  vid("reformation-documentary", "The Protestant Reformation: historical documentary with archive motion", "documentary", false),
   vid("edison-documentary", "Thomas Edison: then vs now documentary with motion graphics", "documentary", false),
   vid("stalin-war-documentary", "WWII archive documentary: archival footage, narration and sound design", "documentary", false),
   vid("dinosaur-explainer", "Dinosaur extinction explainer: kinetic text, UI and 3D Earth", "motion", false),
