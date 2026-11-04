@@ -12,6 +12,8 @@ const vid = (nome, titulo, categoria, vertical = true) => ({ tipo: "video", src:
 const VIDEOS = [
   vid("before-after-raiane-1", "Before and after: raw vs edited talking-head reel", "reels"),
   vid("before-after-raiane-2", "Before and after: talking-head reel with motion graphics", "reels"),
+  vid("reformation-reel", "The Reformation, 1517: history reel with archive motion", "reels"),
+  vid("edison-reel", "Thomas Edison: history reel with kinetic text", "reels"),
   vid("talking-head-reel-1", "Talking-head reel for social media", "reels"),
   vid("talking-head-reel-2", "Podcast-style talking-head reel", "reels"),
   vid("megalodon-documentary", "Megalodon: documentary edit with narration and sound design", "documentary", false),
