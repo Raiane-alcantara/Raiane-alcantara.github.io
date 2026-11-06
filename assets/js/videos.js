@@ -38,4 +38,6 @@ const VIDEOS = [
   vid("saas-launch-motion", "SaaS product launch: UI motion graphics (spec ad)", "motion", false),
   vid("watch-ui-animation", "Watch specs: UI motion graphics", "motion", false),
   vid("ai-perfume-ad", "AI product ad: perfume", "ai", false),
+  vid("ai-perfume-vertical-ad", "AI product ad: luxury perfume, vertical format", "ai"),
+  vid("ai-real-estate-tour", "AI real estate tour: modern house at sunset", "ai"),
 ];
