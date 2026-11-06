@@ -14,6 +14,7 @@ const VIDEOS = [
   vid("before-after-raiane-2", "Before and after: talking-head reel with motion graphics", "reels"),
   vid("reformation-reel", "The Reformation, 1517: history reel with archive motion", "reels"),
   vid("edison-reel", "Thomas Edison: history reel with kinetic text", "reels"),
+  vid("coffee-latte-recipe-motion", "Caffè Latte: animated recipe film (motion graphics, spec ad)", "motion"),
   vid("talking-head-reel-1", "Talking-head reel for social media", "reels"),
   vid("talking-head-reel-2", "Podcast-style talking-head reel", "reels"),
   vid("lake-tahoe-geography", "Lake Tahoe: geography YouTube video with 3D maps and motion graphics", "youtube", false),
