@@ -7,6 +7,7 @@ if errorlevel 1 (
   set /p USUARIO=Digite o nome de usuario do GitHub da Raiane e aperte Enter:
   call git remote add origin https://%%USUARIO%%@github.com/%%USUARIO%%/%%USUARIO%%.github.io.git
 )
+git pull --rebase --autostash origin main
 git add -A
 git -c user.name="Raiane" -c user.email="raiane@users.noreply.github.com" commit -m "Atualiza portfolio" >nul 2>&1
 git push -u origin main
