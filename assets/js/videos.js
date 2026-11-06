@@ -4,7 +4,7 @@
    - YouTube:  { tipo: "youtube", id: "ID_DO_VIDEO", titulo: "...", categoria: "..." }
    - Arquivo:  vid("nome-do-arquivo", "Título", "categoria", false)   (false = horizontal; true = vertical)
                o .mp4 e o -thumb.jpg vão em assets/videos/
-   categoria: reels | documentary | motion | business | ai
+   categoria: reels | youtube | documentary | motion | business | ai
    ========================================================= */
 const X = "assets/videos/";
 const vid = (nome, titulo, categoria, vertical = true) => ({ tipo: "video", src: `${X}${nome}.mp4`, poster: `${X}${nome}-thumb.jpg`, vertical, titulo, categoria });
@@ -16,6 +16,9 @@ const VIDEOS = [
   vid("edison-reel", "Thomas Edison: history reel with kinetic text", "reels"),
   vid("talking-head-reel-1", "Talking-head reel for social media", "reels"),
   vid("talking-head-reel-2", "Podcast-style talking-head reel", "reels"),
+  vid("lake-tahoe-geography", "Lake Tahoe: geography YouTube video with 3D maps and motion graphics", "youtube", false),
+  vid("animated-psychology-explainer", "Hand-drawn animated psychology explainer for YouTube", "youtube", false),
+  vid("boxing-documentary-sample", "Boxing documentary sample: Ryan Garcia vs Tank Davis (Spanish)", "youtube", false),
   vid("megalodon-documentary", "Megalodon: documentary edit with narration and sound design", "documentary", false),
   vid("reformation-documentary", "The Protestant Reformation: historical documentary with archive motion", "documentary", false),
   vid("edison-documentary", "Thomas Edison: then vs now documentary with motion graphics", "documentary", false),

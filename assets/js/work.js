@@ -3,6 +3,7 @@
   const CATS = [
     { id: "all", nome: "All work" },
     { id: "reels", nome: "Reels & Social" },
+    { id: "youtube", nome: "YouTube" },
     { id: "documentary", nome: "Documentary" },
     { id: "motion", nome: "Motion Graphics" },
     { id: "business", nome: "Brand & Business" },
