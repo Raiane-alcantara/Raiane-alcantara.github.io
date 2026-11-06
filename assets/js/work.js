@@ -8,6 +8,7 @@
     { id: "motion", nome: "Motion Graphics" },
     { id: "business", nome: "Brand & Business" },
     { id: "ai", nome: "AI Video" },
+    { id: "design", nome: "Brand Design" },
   ];
   const itens = (typeof VIDEOS !== "undefined" ? VIDEOS : []).map((it) => ({ ...it, cat: it.categoria }));
 
@@ -19,7 +20,8 @@
   let atual = "all", lista = [], pos = 0;
 
   const usadas = new Set(itens.map((i) => i.cat));
-  $("#stats").innerHTML = `<div class="stat"><b>${itens.length}</b><span>videos in this portfolio</span></div><div class="stat"><b>${usadas.size}</b><span>video styles</span></div>`;
+  const soVideos = itens.filter((i) => i.tipo !== "galeria");
+  $("#stats").innerHTML = `<div class="stat"><b>${soVideos.length}</b><span>videos in this portfolio</span></div><div class="stat"><b>${new Set(soVideos.map((i) => i.cat)).size}</b><span>video styles</span></div>`;
 
   $("#tabs").innerHTML = CATS.filter((c) => c.id === "all" || usadas.has(c.id))
     .map((c) => `<button class="tab${c.id === atual ? " is-on" : ""}" data-cat="${c.id}">${c.nome}</button>`).join("");
@@ -33,16 +35,18 @@
   function render() {
     lista = itens.filter((i) => atual === "all" || i.cat === atual);
     $("#grid").innerHTML = lista.map((it, n) => {
-      const largo = it.tipo === "youtube" || !it.vertical;
+      const largo = it.tipo === "youtube" || it.tipo === "galeria" || !it.vertical;
       return `<button class="card${largo ? " card--wide" : ""}" data-n="${n}">
         <img class="card__img" src="${esc(thumb(it))}" alt="${esc(it.titulo)}" loading="lazy">
-        <span class="card__play"></span>
+        ${it.tipo === "galeria" ? "" : `<span class="card__play"></span>`}
         <span class="card__info"><b>${esc(it.titulo)}</b><span>${esc(nomeCat(it.cat))}</span></span>
       </button>`;
     }).join("");
   }
 
   function frame(it) {
+    if (it.tipo === "galeria")
+      return `<div class="modal__gallery">${it.imagens.map((s, i) => `<img src="${esc(s)}" alt="${esc(it.titulo)} · page ${i + 1}" loading="lazy">`).join("")}</div>`;
     if (it.tipo === "youtube")
       return `<div class="modal__frame"><iframe src="https://www.youtube.com/embed/${esc(it.id)}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="${esc(it.titulo)}"></iframe></div>`;
     return `<div class="modal__frame${it.vertical ? " modal__frame--v" : ""}"><video src="${esc(it.src)}" poster="${esc(it.poster)}" controls autoplay playsinline></video></div>`;

@@ -4,10 +4,14 @@
    - YouTube:  { tipo: "youtube", id: "ID_DO_VIDEO", titulo: "...", categoria: "..." }
    - Arquivo:  vid("nome-do-arquivo", "Título", "categoria", false)   (false = horizontal; true = vertical)
                o .mp4 e o -thumb.jpg vão em assets/videos/
-   categoria: reels | youtube | documentary | motion | business | ai
+   - Design:   galeria("pasta", ["01-cover", "02-about"], "Título")
+               as imagens .jpg e o thumb.jpg vão em assets/design/pasta/
+   categoria: reels | youtube | documentary | motion | business | ai | design
    ========================================================= */
 const X = "assets/videos/";
 const vid = (nome, titulo, categoria, vertical = true) => ({ tipo: "video", src: `${X}${nome}.mp4`, poster: `${X}${nome}-thumb.jpg`, vertical, titulo, categoria });
+const D = "assets/design/";
+const galeria = (pasta, paginas, titulo, categoria = "design") => ({ tipo: "galeria", imagens: paginas.map((p) => `${D}${pasta}/${p}.jpg`), poster: `${D}${pasta}/thumb.jpg`, titulo, categoria });
 
 const VIDEOS = [
   vid("before-after-raiane-1", "Before and after: raw vs edited talking-head reel", "reels"),
@@ -41,4 +45,5 @@ const VIDEOS = [
   vid("ai-perfume-ad", "AI product ad: perfume", "ai", false),
   vid("ai-perfume-vertical-ad", "AI product ad: luxury perfume, vertical format", "ai"),
   vid("ai-real-estate-tour", "AI real estate tour: modern house at sunset", "ai"),
+  galeria("harbor-pine", ["01-cover", "02-about", "03-logo", "04-colors", "05-typography", "06-photography"], "Harbor & Pine: brand guidelines in Canva (spec project)"),
 ];
